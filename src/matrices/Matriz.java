@@ -48,6 +48,12 @@ public class Matriz {
         return matrizResultante; 
     } 
 
+    /**
+     * Función que permite invertir una matriz, devolviendo como resultado la matriz inversa.
+     * @param a (Matriz a invertir)
+     * @return (Matriz inversa)
+     * @throws DimensionesIncompatibles
+     */
     public static Matriz matrizInversa(Matriz a) throws DimensionesIncompatibles {
         if(! a.getDimension().height.equals(a.getDimension().width)) throw new DimensionesIncompatibles("La matriz debe ser cuadrada");
         double det=1/determinante(a);
